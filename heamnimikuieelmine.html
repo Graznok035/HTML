@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+  <meta charset="UTF-8">
+  <title>Õpilase registreerimisvorm</title>
+
+  <style>
+    form {
+      max-width: 600px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+    }
+    th {
+      text-align: left;
+      vertical-align: top;
+      padding: 6px 10px 6px 0;
+      width: 35%;
+    }
+
+    td {
+      padding: 6px 0;
+    }
+  </style>
+</head>
+
+<body>
+
+<h1>ÕPILASE REGISTREERIMISVORM</h1>
+
+<form action="#" method="post">
+
+  <table>
+    <h2>Isikuandmed</h2>
+
+    <tr>
+      <th>Eesnimi</th>
+      <td><input type="text" placeholder="nt Karin" maxlength="30" required></td>
+    </tr>
+
+    <tr>
+      <th>Perenimi</th>
+      <td><input type="text" placeholder="nt Eegreid" maxlength="30" required></td>
+    </tr>
+
+    <tr>
+      <th>Sünnikuupäev</th>
+      <td>
+        <input type="date" min="1950-01-01" max="2025-12-31" value="1980-01-01">
+      </td>
+    </tr>
+
+    <tr>
+      <th>Sugu</th>
+      <td class="inline">
+        <label><input type="radio" name="sugu"> Naine</label>
+        <label><input type="radio" name="sugu"> Mees</label>
+        <label><input type="radio" name="sugu"> Muu</label>
+      </td>
+    </tr>
+  </table>
+
+  <table>
+    <h2>Kontakt</h2>
+
+    <tr>
+      <th>E-post</th>
+      <td><input type="email" placeholder="nt nimi@kool.ee" required></td>
+    </tr>
+
+    <tr>
+      <th>Mobiiltelefon</th>
+      <td>
+        <input type="tel" placeholder="+372 51234567" pattern="\+372\s?\d{7,8}">
+      </td>
+    </tr>
+
+    <tr>
+      <th>Aadress</th>
+      <td><textarea rows="3"></textarea></td>
+    </tr>
+
+    <tr>
+      <th>Linn / asula</th>
+      <td><input type="text" placeholder="nt Tallinn"></td>
+    </tr>
+
+    <tr>
+      <th>Postiindeks</th>
+      <td><input type="text" pattern="\d{5}"></td>
+    </tr>
+
+    <tr>
+      <th>Riik</th>
+      <td><input type="text" value="Eesti" readonly></td>
+    </tr>
+  </table>
+
+  <table>
+    <h2>Muu info</h2>
+
+    <tr>
+      <th>Huvialad</th>
+      <td class="inline">
+        <label><input type="checkbox"> Joonistamine</label>
+        <label><input type="checkbox"> Laulmine</label>
+        <label><input type="checkbox"> Tantsimine</label>
+        <label><input type="checkbox"> Muu:</label>
+        <input type="text" placeholder="täpsusta" style="width:120px">
+      </td>
+    </tr>
+
+    <tr>
+      <th>Isiklik veebileht</th>
+      <td><input type="url" placeholder="https://minuleht.ee"></td>
+    </tr>
+
+    <tr>
+      <th>Lemmikvärv</th>
+      <td><input type="color" value="#0057ff"></td>
+    </tr>
+
+    <tr>
+      <th>Dokumendid</th>
+      <td><input type="file" accept=".pdf,image/*"></td>
+    </tr>
+  </table>
+
+  <table>
+    <h2>Nõustumine</h2>
+
+    <tr>
+      <td colspan="2">
+        <label>
+          <input type="checkbox" required>
+          Kinnitan, et esitatud andmed on ebavaled.
+        </label>
+      </td>
+    </tr>
+  </table>
+
+  <p>
+    <button type="submit">Saada</button>
+    <button type="reset">Tühjenda</button>
+  </p>
+
+</form>
+
+</body>
+</html>
